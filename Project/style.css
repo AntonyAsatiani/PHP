@@ -1,0 +1,28 @@
+body
+{
+	background-image: url('image.jpg');
+}
+
+img
+{
+	width: 100%;
+	height: auto;
+}
+
+.registration
+{
+	text-align: center;
+	margin-top: 20%;
+}
+p
+{
+	color:white;
+}
+label
+{
+	color: white;
+}
+.login
+{
+	text-align: right;
+}
