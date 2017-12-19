@@ -272,6 +272,7 @@
    {
     margin-top:50px;
     margin-left:0px;
+  
    }
    
 
@@ -361,9 +362,11 @@
   .chat_area .chat-body1 {
     margin-left: 50px;
   }
-  .chat-body1 p {
+  .chat-body1 li {
     background: #fbf9fa none repeat scroll 0 0;
     padding: 10px;
+    margin: 20px;
+    
   }
   .chat_area .admin_chat .chat-body1 {
     margin-left: 0;
@@ -403,6 +406,16 @@
   #voice
   {
   	margin-left: 400px;
+  }
+
+  .user_name{
+    font-size :10px;    
+  }
+  
+  h6
+  {
+    margin-left: 20px;
+    margin-bottom: 20px;
   }
 
   /*

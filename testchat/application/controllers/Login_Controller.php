@@ -27,8 +27,8 @@ class Login_Controller extends CI_Controller
 			$email = $this->input->post('email');
 			$password = $this->input->post('password');
 			 
-		    $result = $this->Login_Model->Take_User_Email_And_Password($email,$password);
-            		    
+		    $result = $this->Login_Model->Retrieve_User_From_DB($email,$password);
+        
 		    if($result)
 		    	{
 
@@ -37,10 +37,12 @@ class Login_Controller extends CI_Controller
 		    	foreach ($result as $row) {
 		    		$Users_Session = array(
 		    			'id' => $row->Id,
-		    			'email' => $row->Email
+		    			'email' => $row->Email,
+		    			'firstname' => $row->Firstname,
+		    			'lastname' => $row->Lastname
 		    			);
+		    		
 		    		$this->session->set_userdata('logged_in',$Users_Session);
-		    	
 		    	}
 		    	return true;
 
@@ -58,12 +60,13 @@ class Login_Controller extends CI_Controller
 
 		}
 	private function initializing_session()
-	{
+	{	
+		
 		if($this->session->userdata('logged_in'))
 		{
 			$session_data = $this->session->userdata('logged_in');
 			$data['email'] = $session_data['email'];
-			
+
 
 			
 		}
@@ -89,7 +92,7 @@ class Login_Controller extends CI_Controller
   	}
   	else
   	{
-  		$this-> initializing_session();
+  		$this->initializing_session();
   		$this->load->view('chat');	
   	}
   	//$this->check_User_Email_And_Password();

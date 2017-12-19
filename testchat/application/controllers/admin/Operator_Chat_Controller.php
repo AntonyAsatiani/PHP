@@ -5,7 +5,7 @@ class Operator_Chat_Controller extends CI_Controller
 	{
 		$this->load->view("admin/operator_chat");
 	}
-
+	
 }
 
 ?>

@@ -40,7 +40,7 @@
 <div id="div-forms">
                 
                     <!-- Begin # Login Form -->
-                    <form id="login-form" method="POST" action="<?php echo site_url('Login_Controller/login'); ?>" >
+                    <form id="login-form" method="POST" action="<?php echo site_url('Chat'); ?>" >
 		                <?php echo validation_errors(); ?>
                         <div class="modal-body">
 				    		
@@ -84,11 +84,7 @@
 </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script language="Javascript" type="text/javascript" src="<?php echo base_url(); ?>Js/login.js"</script>
-
-
-
-
+  <!--<script src="http://localhost/testchat/Js/login.js"</script> -->
  
 
 </body>
